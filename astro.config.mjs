@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
+  site: 'https://hema.academy',
   output: 'static',
   trailingSlash: 'never',
   i18n: {
