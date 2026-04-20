@@ -92,7 +92,7 @@ export const COPY = {
     langToggle: 'العربية',
   },
   ar: {
-    nav: { home: 'الرئيسية', courses: 'البرامج', register: 'التسجيل', about: 'عن الأكاديمية' },
+    nav: { home: 'الرئيسية', courses: 'البرامج', register: 'التسجيل', about: 'عن همّة' },
     cta: { apply: 'قدّم الآن', syllabus: 'عرض المنهج', signup: 'سجّل اهتمامك', submit: 'إرسال' },
     home: {
       eyebrow: 'الدفعة الأولى · تنطلق قريبًا',
