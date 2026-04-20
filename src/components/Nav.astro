@@ -11,7 +11,6 @@ const t = COPY[lang];
 const other = oppositeLang(lang);
 
 const links = [
-  { key: 'home',     label: t.nav.home,     href: `/${lang}` },
   { key: 'courses',  label: t.nav.courses,  href: `/${lang}/courses` },
   { key: 'register', label: t.nav.register, href: `/${lang}/register` },
   { key: 'about',    label: t.nav.about,    href: `/${lang}/about` },
@@ -22,7 +21,7 @@ const path = Astro.url.pathname.replace(/^\/(en|ar)/, '') || '';
 const toggleHref = `/${other}${path}`;
 ---
 
-<nav class="sticky top-0 z-20 bg-cream border-b border-black/8 px-6 md:px-12 py-5 flex items-center justify-between">
+<nav class="sticky top-0 z-20 bg-cream border-b border-black/8 px-6 md:px-12 py-5 flex items-center justify-between gap-5 md:gap-0">
   <a href={`/${lang}`} class="flex items-center gap-3 no-underline">
     <AscentMark size={30} fgClass="fill-ink" notchClass="fill-cream" />
     <span class="font-serif text-[22px] font-medium tracking-[-0.02em] text-ink">hema</span>
