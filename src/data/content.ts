@@ -269,18 +269,21 @@ export const TEAM: TeamMember[] = [
   },
   {
     initials: 'NT', colorClass: 'bg-oasis', textClass: 'text-cream',
+    photo: '/team/naguib-toihiri.jpg',
     name: { en: 'Naguib Toihiri', ar: 'نجيب طويهري' },
     role: { en: 'Co-founder', ar: 'شريك مؤسِّس' },
     linkedin: 'https://www.linkedin.com/in/naguib-toihiri/',
   },
   {
     initials: 'MA', colorClass: 'bg-night', textClass: 'text-cream',
+    photo: '/team/mohtab-arabiat.jpg',
     name: { en: 'Mohtab Arabiat', ar: 'مهتاب عرابيات' },
     role: { en: 'Co-founder', ar: 'شريك مؤسِّس' },
     linkedin: 'https://www.linkedin.com/in/mohtab/',
   },
   {
     initials: 'AJ', colorClass: 'bg-saffron', textClass: 'text-ink',
+    photo: '/team/abdel-kader-jrab.jpg',
     name: { en: 'Abdel Kader Jrab', ar: 'عبد القادر جراب' },
     role: { en: 'Co-founder', ar: 'شريك مؤسِّس' },
     linkedin: 'https://www.linkedin.com/in/abdelkaderjrab/',
