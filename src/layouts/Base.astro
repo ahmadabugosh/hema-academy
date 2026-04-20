@@ -1,0 +1,39 @@
+---
+import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { dir, type Lang } from '../data/content.ts';
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description?: string;
+  current: 'home' | 'courses' | 'register' | 'about' | 'course';
+}
+const { lang, title, description, current } = Astro.props;
+const d = dir(lang);
+---
+
+<!doctype html>
+<html lang={lang} dir={d}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description ?? 'Hema Academy — Learn the craft of AI-era marketing. An eight-week intensive in Riyadh.'} />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap"
+    />
+  </head>
+  <body class="min-h-screen bg-cream text-ink">
+    <Nav lang={lang} current={current} />
+    <main>
+      <slot />
+    </main>
+    <Footer lang={lang} />
+  </body>
+</html>

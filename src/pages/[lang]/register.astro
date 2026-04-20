@@ -1,0 +1,156 @@
+---
+import Base from '../../layouts/Base.astro';
+import AscentMark from '../../components/AscentMark.astro';
+import { COPY, COURSES, COHORTS, LOCALES, type Lang } from '../../data/content.ts';
+
+export async function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Lang;
+const t = COPY[lang];
+const r = t.register;
+---
+
+<Base lang={lang} current="register" title={`${t.nav.register} — Hema Academy`}>
+  <section class="px-6 md:px-12 pt-20 pb-10">
+    <div class="eyebrow mb-4">{r.eyebrow}</div>
+    <h1 class="font-serif text-[44px] md:text-[68px] font-normal tracking-[-0.03em] leading-none mb-4">{r.title}</h1>
+    <p class="text-[15px] text-black/60 max-w-[560px] leading-relaxed">{r.sub}</p>
+  </section>
+
+  <section class="px-6 md:px-12 pb-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12">
+    {/* Form */}
+    <div class="bg-cream p-8 md:p-10 border border-black/8">
+      <form id="register-form" class="flex flex-col" data-lang={lang}>
+        <label for="email" class="text-[11px] tracking-[2px] font-semibold text-ink block mb-2">{r.emailLabel}</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          required
+          placeholder={r.emailPh}
+          class="w-full px-4 py-3.5 text-[15px] border border-ink bg-transparent mb-6 font-[inherit] outline-none focus:bg-sand/50"
+        />
+
+        <div class="text-[11px] tracking-[2px] font-semibold text-ink mb-2.5">{r.trackLabel}</div>
+        <div class="flex flex-col gap-2.5 mb-6" data-group="track">
+          {COURSES.map((c, i) => (
+            <label class="flex gap-3 items-start cursor-pointer p-3.5 border border-black/15 has-[:checked]:border-ink has-[:checked]:bg-sand transition-colors">
+              <input type="radio" name="track" value={c.id} class="mt-1" checked={i === 0} />
+              <div>
+                <div class="font-serif text-[17px] tracking-[-0.02em] mb-0.5">{c.title[lang]}</div>
+                <div class="text-[12px] text-black/60">{c.duration[lang]}</div>
+              </div>
+            </label>
+          ))}
+        </div>
+
+        <div class="text-[11px] tracking-[2px] font-semibold text-ink mb-2.5">{r.cohortLabel}</div>
+        <div class="flex gap-2 mb-7" data-group="cohort">
+          {COHORTS.map((co, i) => (
+            <label
+              class:list={[
+                'flex-1',
+                co.open ? 'cursor-pointer' : 'cursor-not-allowed',
+              ]}
+            >
+              <input
+                type="radio"
+                name="cohort"
+                value={co.code}
+                checked={i === 0 && co.open}
+                disabled={!co.open}
+                class="sr-only peer"
+              />
+              <div
+                class:list={[
+                  'text-center py-3 px-2 text-[12px] tracking-[1px] font-semibold border',
+                  'peer-checked:bg-ink peer-checked:text-cream peer-checked:border-ink',
+                  co.open ? 'border-black/15 text-ink' : 'border-black/10 text-black/35',
+                ]}
+              >
+                {r.cohortWord} {co.code}
+              </div>
+            </label>
+          ))}
+        </div>
+
+        <button
+          type="submit"
+          class="w-full py-4 text-[12px] tracking-[2px] font-semibold bg-ink text-cream border-0 cursor-pointer hover:bg-ink/90 transition-colors"
+        >
+          {t.cta.submit} →
+        </button>
+      </form>
+
+      <div id="register-success" class="hidden">
+        <AscentMark size={48} fgClass="fill-ink" notchClass="fill-cream" />
+        <div class="font-serif text-[28px] md:text-[34px] tracking-[-0.025em] leading-tight mt-5 mb-2.5">
+          {r.successTitle}
+        </div>
+        <div id="register-success-body" class="text-[14px] text-black/65 leading-relaxed"></div>
+      </div>
+    </div>
+
+    {/* Schedule */}
+    <div>
+      <h2 class="font-serif text-[28px] md:text-[32px] font-normal tracking-[-0.025em] m-0 mb-1.5">{r.scheduleTitle}</h2>
+      <p class="text-[13px] text-black/60 mb-6">{r.scheduleSub}</p>
+      <div class="border border-black/10">
+        {COHORTS.map((co, i) => (
+          <div
+            class:list={[
+              'p-6 flex justify-between items-center',
+              i !== 0 && 'border-t border-black/8',
+              co.open ? 'bg-sand' : '',
+            ]}
+          >
+            <div>
+              <div class="eyebrow mb-1.5">{r.cohortWord} {co.code}</div>
+              <div class="font-serif text-[22px] tracking-[-0.02em]">{co.start[lang]}</div>
+              <div class="text-[12px] text-black/55 mt-0.5">{r.through} {co.end[lang]}</div>
+            </div>
+            <div
+              class:list={[
+                'text-[10px] tracking-[2px] font-semibold px-3 py-1.5',
+                co.open ? 'bg-ink text-cream' : 'text-black/50 border border-black/20',
+              ]}
+            >
+              {co.status[lang].toUpperCase()}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>
+
+<script>
+  // Progressive-enhancement form handler.
+  // In a future milestone this will POST to /api/register which forwards to Loops.so.
+  const form = document.getElementById('register-form') as HTMLFormElement | null;
+  const success = document.getElementById('register-success');
+  const successBody = document.getElementById('register-success-body');
+  if (form && success && successBody) {
+    const lang = form.dataset.lang === 'ar' ? 'ar' : 'en';
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const email = String(data.get('email') || '');
+      if (!email) return;
+
+      try {
+        // Placeholder — wire up to /api/register once the serverless endpoint exists.
+        // await fetch('/api/register', { method: 'POST', body: data });
+      } catch { /* swallow for now */ }
+
+      form.classList.add('hidden');
+      success.classList.remove('hidden');
+      successBody.textContent =
+        lang === 'ar'
+          ? `شكرًا، ${email}. تفقّد بريدك الإلكتروني خلال الساعات القادمة لتصلك تفاصيل المنهج والخطوات التالية.`
+          : `Thanks, ${email}. Check your inbox in the next few hours for syllabus details and next steps.`;
+    });
+  }
+</script>

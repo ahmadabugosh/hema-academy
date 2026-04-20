@@ -1,0 +1,102 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { COPY, COURSES, LOCALES, type Lang } from '../../../data/content.ts';
+
+export async function getStaticPaths() {
+  const paths: { params: { lang: Lang; id: string } }[] = [];
+  for (const lang of LOCALES) {
+    for (const c of COURSES) {
+      paths.push({ params: { lang, id: c.id } });
+    }
+  }
+  return paths;
+}
+
+const { lang, id } = Astro.params as { lang: Lang; id: string };
+const t = COPY[lang];
+const c = COURSES.find((x) => x.id === id)!;
+const syllabus = c.syllabus[lang];
+---
+
+<Base lang={lang} current="course" title={`${c.title[lang]} — Hema Academy`} description={c.tagline[lang]}>
+  {/* Hero — dark */}
+  <section class="px-6 md:px-12 pt-20 pb-14 bg-ink text-cream">
+    <div class="eyebrow mb-4">{t.course.eyebrow}</div>
+    <h1 class="font-serif text-[40px] md:text-[64px] font-normal tracking-[-0.03em] leading-[1.02] mb-5 max-w-[900px]">
+      {c.title[lang]}
+    </h1>
+    <p class="text-[15px] md:text-[17px] opacity-80 leading-relaxed max-w-[680px] mb-8">{c.tagline[lang]}</p>
+    <div class="flex flex-wrap gap-8 md:gap-10 text-[13px] opacity-85 mb-8">
+      <div>
+        <span class="opacity-60">{t.course.durationLabel}</span><br />
+        <b>{c.duration[lang]}</b>
+      </div>
+      <div>
+        <span class="opacity-60">{t.course.nextLabel}</span><br />
+        <b>{c.next[lang]}</b>
+      </div>
+      <div>
+        <span class="opacity-60">{t.course.formatLabel}</span><br />
+        <b>{t.course.formatValue}</b>
+      </div>
+    </div>
+    <a href={`/${lang}/register`} class="btn-clay">{t.cta.signup} →</a>
+  </section>
+
+  {/* Syllabus */}
+  <section class="px-6 md:px-12 py-20">
+    <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-10 md:gap-14">
+      <div>
+        <div class="eyebrow mb-2.5">{t.course.syllabusTitle}</div>
+        <h2 class="font-serif text-[36px] md:text-[44px] font-normal tracking-[-0.03em] leading-none m-0">
+          {t.course.syllabusHeading}
+        </h2>
+      </div>
+      <div>
+        {syllabus.map(([n, title, body]) => (
+          <div class="border-t border-black/10 py-6 grid grid-cols-[60px_1fr] gap-6">
+            <div class="font-serif text-[24px] md:text-[28px] text-clay tracking-[-0.02em]">{n}</div>
+            <div>
+              <div class="font-serif text-[20px] md:text-[22px] tracking-[-0.02em] mb-1.5">{title}</div>
+              <div class="text-[14px] text-black/65 leading-relaxed">{body}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Who / Logistics */}
+  <section class="px-6 md:px-12 py-14 bg-sand grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
+    <div>
+      <div class="eyebrow mb-3">{t.course.whoTitle}</div>
+      <h3 class="font-serif text-[28px] md:text-[32px] font-normal tracking-[-0.025em] mb-4">{t.course.whoHeading}</h3>
+      <ul class="list-none p-0 m-0">
+        {c.who[lang].map((w) => (
+          <li class="text-[15px] text-ink py-2.5 border-t border-black/10 flex gap-3">
+            <span class="text-clay">→</span>{w}
+          </li>
+        ))}
+      </ul>
+    </div>
+    <div>
+      <div class="eyebrow mb-3">{t.course.logTitle}</div>
+      <h3 class="font-serif text-[28px] md:text-[32px] font-normal tracking-[-0.025em] mb-4">{t.course.logHeading}</h3>
+      <div class="text-[14px] text-black/70 leading-[1.7]">
+        <b>{t.course.logWhen}:</b> {t.course.logWhenVal}<br />
+        <b>{t.course.logWhere}:</b> {t.course.logWhereVal}<br />
+        <b>{t.course.logRemote}:</b> {t.course.logRemoteVal}<br />
+        <b>{t.course.logCost}:</b> {t.course.logCostVal}
+      </div>
+    </div>
+  </section>
+
+  {/* CTA */}
+  <section class="px-6 md:px-12 py-20 text-center">
+    <h2 class="font-serif text-[36px] md:text-[48px] font-light tracking-[-0.03em] leading-tight mb-3.5">
+      {t.course.readyTitle}
+    </h2>
+    <p class="text-[15px] text-black/60 mb-7">{t.course.readySub}</p>
+    <a href={`/${lang}/register`} class="btn-primary">{t.cta.signup} →</a>
+  </section>
+</Base>

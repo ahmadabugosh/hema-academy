@@ -1,0 +1,98 @@
+---
+import Base from '../../layouts/Base.astro';
+import AscentMark from '../../components/AscentMark.astro';
+import { COPY, COURSES, LOCALES, type Lang } from '../../data/content.ts';
+
+export async function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Lang;
+const t = COPY[lang];
+const h = t.home;
+---
+
+<Base lang={lang} current="home" title={`Hema Academy — ${h.heroLine1} ${h.heroEm} ${h.heroLine2}`}>
+  {/* Hero */}
+  <section class="px-6 md:px-12 pt-20 pb-14 grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-14 items-center">
+    <div>
+      <div class="eyebrow mb-5">{h.eyebrow}</div>
+      <h1 class="h-serif text-[44px] md:text-[64px] lg:text-[76px] text-ink mb-6">
+        {h.heroLine1} <em class="not-italic text-clay font-serif">{h.heroEm}</em><br />{h.heroLine2}
+      </h1>
+      <p class="text-base text-black/65 leading-relaxed max-w-[540px] mb-8">{h.heroSub}</p>
+      <div class="flex flex-wrap gap-3">
+        <a href={`/${lang}/register`} class="btn-primary">{t.cta.apply} →</a>
+        <a href={`/${lang}/courses`} class="btn-outline">{t.cta.syllabus}</a>
+      </div>
+    </div>
+    <div class="flex justify-center">
+      <AscentMark size={340} fgClass="fill-ink" notchClass="fill-cream" />
+    </div>
+  </section>
+
+  {/* Metrics */}
+  <section class="px-6 md:px-12 py-16 bg-sand border-y border-black/5">
+    <h2 class="h-serif text-[28px] md:text-[36px] mb-10 max-w-[720px]">{h.metricsTitle}</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-10">
+      {[[h.m1, h.m1l], [h.m2, h.m2l], [h.m3, h.m3l], [h.m4, h.m4l]].map(([n, l]) => (
+        <div>
+          <div class="font-serif text-[56px] md:text-[72px] font-normal tracking-[-0.03em] leading-none text-clay">{n}</div>
+          <div class="text-[13px] text-black/65 mt-2.5 leading-snug">{l}</div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  {/* Programmes */}
+  <section class="px-6 md:px-12 py-20">
+    <div class="eyebrow mb-2.5">{t.nav.courses}</div>
+    <h2 class="h-serif text-[34px] md:text-[44px] mb-2.5">{h.programsTitle}</h2>
+    <p class="text-[15px] text-black/60 max-w-[580px] mb-10">{h.programsSub}</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {COURSES.map((c, i) => (
+        <a
+          href={`/${lang}/courses/${c.id}`}
+          class:list={[
+            'p-9 no-underline flex flex-col min-h-[260px] cursor-pointer transition-transform hover:-translate-y-0.5',
+            i === 0 ? 'bg-ink text-cream' : 'bg-cream text-ink border border-black/10',
+          ]}
+        >
+          <div class={`text-[10px] tracking-[3px] font-semibold mb-4 ${i === 0 ? 'opacity-70' : 'opacity-70'}`}>
+            {c.duration[lang].toUpperCase()}
+          </div>
+          <div class="font-serif text-[28px] md:text-[34px] tracking-[-0.02em] leading-tight mb-3.5 flex-1">
+            {c.title[lang]}
+          </div>
+          <div class="text-[13px] leading-relaxed opacity-80 mb-5">{c.tagline[lang]}</div>
+          <div
+            class:list={[
+              'text-[11px] tracking-[2px] font-semibold pt-3.5 flex justify-between border-t',
+              i === 0 ? 'border-white/20' : 'border-black/15',
+            ]}
+          >
+            <span>{c.next[lang]}</span><span>{t.cta.syllabus} →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  {/* Testimony */}
+  <section class="px-6 md:px-12 py-20 bg-clay text-cream">
+    <div class="max-w-[900px]">
+      <div class="text-[11px] tracking-[3px] opacity-75 font-semibold mb-5">{h.testimonyEyebrow}</div>
+      <blockquote class="font-serif text-[28px] md:text-[38px] font-light tracking-[-0.02em] leading-[1.3] mb-7 m-0">
+        {h.testimonyQuote}
+      </blockquote>
+      <div class="text-[13px] tracking-[1px] opacity-85">— {h.testimonyBy}</div>
+    </div>
+  </section>
+
+  {/* Closing */}
+  <section class="px-6 md:px-12 py-24 text-center">
+    <h2 class="font-serif text-[48px] md:text-[68px] font-light tracking-[-0.03em] leading-none mb-4">{h.closingTitle}</h2>
+    <p class="text-base text-black/60 mb-8">{h.closingSub}</p>
+    <a href={`/${lang}/register`} class="btn-primary">{t.cta.apply} →</a>
+  </section>
+</Base>

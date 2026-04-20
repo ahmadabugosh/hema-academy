@@ -1,0 +1,52 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-ink: #161514;
+  --color-cream: #faf6ee;
+  --color-sand: #f4ede1;
+  --color-clay: #c0582a;
+  --color-saffron: #d4a24a;
+  --color-oasis: #1f4d3a;
+  --color-night: #0f2d4a;
+
+  --font-serif: 'Fraunces', ui-serif, Georgia, serif;
+  --font-arabic: 'Amiri', 'Noto Naskh Arabic', serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+html, body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Arabic UI gets Amiri for headings naturally via utility, but body text keeps sans */
+html[dir='rtl'] {
+  font-family: 'Amiri', 'Noto Naskh Arabic', var(--font-sans);
+}
+
+.eyebrow {
+  @apply text-[11px] tracking-[3px] font-semibold text-clay uppercase;
+}
+
+.btn-primary {
+  @apply inline-flex items-center gap-2 bg-ink text-cream px-6 py-3.5 text-xs tracking-[2px] font-semibold cursor-pointer border-0 hover:bg-ink/90 transition;
+}
+
+.btn-outline {
+  @apply inline-flex items-center gap-2 bg-transparent border border-ink text-ink px-6 py-3.5 text-xs tracking-[2px] font-semibold cursor-pointer hover:bg-ink hover:text-cream transition;
+}
+
+.btn-clay {
+  @apply inline-flex items-center gap-2 bg-clay text-cream px-6 py-3.5 text-xs tracking-[2px] font-semibold cursor-pointer border-0 hover:bg-clay/90 transition;
+}
+
+.h-serif {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}

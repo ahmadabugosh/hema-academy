@@ -1,0 +1,23 @@
+---
+interface Props {
+  size?: number;
+  fgClass?: string;
+  notchClass?: string;
+  class?: string;
+}
+const { size = 40, fgClass = 'fill-ink', notchClass = 'fill-cream', class: className = '' } = Astro.props;
+---
+
+<svg
+  viewBox="0 0 120 120"
+  width={size}
+  height={size}
+  class={`block ${className}`}
+  aria-hidden="true"
+>
+  <g transform="translate(12 16)">
+    <path d="M 0 88 L 48 0 L 48 88 Z" class={fgClass} />
+    <path d="M 48 0 L 96 88 L 48 88 Z" class={fgClass} opacity="0.86" />
+    <path d="M 44 14 L 48 0 L 52 14 Z" class={notchClass} />
+  </g>
+</svg>

@@ -1,0 +1,39 @@
+---
+import AscentMark from './AscentMark.astro';
+import { COPY, COURSES, type Lang } from '../data/content.ts';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = COPY[lang];
+---
+
+<footer class="bg-ink text-cream px-6 md:px-12 pt-12 pb-8 mt-20">
+  <div class="grid grid-cols-1 md:grid-cols-[1.4fr_1fr_1fr_1fr] gap-10 mb-10">
+    <div>
+      <AscentMark size={36} fgClass="fill-cream" notchClass="fill-ink" />
+      <div class="font-serif text-[28px] tracking-[-0.02em] mt-3.5 mb-1.5">{t.footer.tag}</div>
+      <div class="text-xs opacity-60">{t.footer.rights}</div>
+    </div>
+    <div>
+      <div class="text-[10px] tracking-[3px] opacity-60 mb-2.5 font-semibold">{t.footer.courses}</div>
+      {COURSES.map((c) => (
+        <div class="text-[13px] mb-1.5 opacity-85">{c.title[lang]}</div>
+      ))}
+    </div>
+    <div>
+      <div class="text-[10px] tracking-[3px] opacity-60 mb-2.5 font-semibold">{t.footer.contact}</div>
+      <div class="text-[13px] mb-1.5 opacity-85">hello@hema.sa</div>
+      <div class="text-[13px] opacity-85">+966 11 000 0000</div>
+    </div>
+    <div>
+      <div class="text-[10px] tracking-[3px] opacity-60 mb-2.5 font-semibold">{t.footer.follow}</div>
+      <div class="text-[13px] mb-1.5 opacity-85">Instagram</div>
+      <div class="text-[13px] mb-1.5 opacity-85">LinkedIn</div>
+      <div class="text-[13px] opacity-85">X / Twitter</div>
+    </div>
+  </div>
+  <div class="border-t border-white/12 pt-5 text-[11px] tracking-[2px] opacity-50 flex justify-between">
+    <span>{t.footer.made}</span>
+    <span class="font-arabic text-[14px] tracking-normal">{t.footer.wordmark}</span>
+  </div>
+</footer>

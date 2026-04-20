@@ -1,0 +1,53 @@
+---
+import AscentMark from './AscentMark.astro';
+import { COPY, oppositeLang, type Lang } from '../data/content.ts';
+
+interface Props {
+  lang: Lang;
+  current: 'home' | 'courses' | 'register' | 'about' | 'course';
+}
+const { lang, current } = Astro.props;
+const t = COPY[lang];
+const other = oppositeLang(lang);
+
+const links = [
+  { key: 'home',     label: t.nav.home,     href: `/${lang}` },
+  { key: 'courses',  label: t.nav.courses,  href: `/${lang}/courses` },
+  { key: 'register', label: t.nav.register, href: `/${lang}/register` },
+  { key: 'about',    label: t.nav.about,    href: `/${lang}/about` },
+] as const;
+
+// Preserve page when switching language
+const path = Astro.url.pathname.replace(/^\/(en|ar)/, '') || '';
+const toggleHref = `/${other}${path}`;
+---
+
+<nav class="sticky top-0 z-20 bg-cream border-b border-black/8 px-6 md:px-12 py-5 flex items-center justify-between">
+  <a href={`/${lang}`} class="flex items-center gap-3 no-underline">
+    <AscentMark size={30} fgClass="fill-ink" notchClass="fill-cream" />
+    <span class="font-serif text-[22px] font-medium tracking-[-0.02em] text-ink">hema</span>
+    <span class="font-arabic text-[20px] text-ink ms-1">همّة</span>
+  </a>
+
+  <div class="flex gap-4 md:gap-7 items-center">
+    {links.map((l) => (
+      <a
+        href={l.href}
+        class:list={[
+          'text-[13px] no-underline pb-[3px] border-b-[1.5px] transition-colors',
+          current === l.key
+            ? 'text-ink font-semibold border-clay'
+            : 'text-black/65 font-medium border-transparent hover:text-ink',
+        ]}
+      >
+        {l.label}
+      </a>
+    ))}
+    <a
+      href={toggleHref}
+      class="bg-transparent border border-ink text-ink px-3 py-1.5 text-[11px] tracking-[2px] font-semibold no-underline hover:bg-ink hover:text-cream transition-colors"
+    >
+      {t.langToggle}
+    </a>
+  </div>
+</nav>
