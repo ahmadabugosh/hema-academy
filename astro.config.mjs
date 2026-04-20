@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
+import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://hema.academy',
@@ -10,5 +11,13 @@ export default defineConfig({
     locales: ['en', 'ar'],
     routing: { prefixDefaultLocale: true, redirectToDefaultLocale: true },
   },
+  integrations: [
+    sitemap({
+      i18n: {
+        defaultLocale: 'en',
+        locales: { en: 'en', ar: 'ar' },
+      },
+    }),
+  ],
   vite: { plugins: [tailwindcss()] },
 });

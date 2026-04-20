@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hema.academy/sitemap-index.xml
