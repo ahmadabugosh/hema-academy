@@ -10,6 +10,7 @@
 :{$PORT:8080} {
 	root * /srv
 	encode zstd gzip
+	redir / /en 301
 	try_files {path} {path}/index.html
 
 	@html path *.html
