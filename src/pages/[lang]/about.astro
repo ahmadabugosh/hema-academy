@@ -44,20 +44,35 @@ const a = t.about;
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       {TEAM.map((p) => (
         <div class="grid grid-cols-[120px_1fr] md:grid-cols-[140px_1fr] gap-5 md:gap-6 p-6 border border-black/8 bg-cream">
-          <div class:list={['w-[120px] h-[120px] md:w-[140px] md:h-[140px] flex items-center justify-center font-serif text-[40px] md:text-[48px] tracking-[-0.02em] font-normal', p.colorClass, p.textClass]}>
-            {p.initials}
-          </div>
+          {p.photo ? (
+            <img
+              src={p.photo}
+              alt={p.name[lang]}
+              class="w-[120px] h-[120px] md:w-[140px] md:h-[140px] object-cover"
+            />
+          ) : (
+            <div class:list={['w-[120px] h-[120px] md:w-[140px] md:h-[140px] flex items-center justify-center font-serif text-[40px] md:text-[48px] tracking-[-0.02em] font-normal', p.colorClass, p.textClass]}>
+              {p.initials}
+            </div>
+          )}
           <div>
             <div class="font-serif text-[22px] tracking-[-0.02em] mb-0.5">{p.name[lang]}</div>
             <div class="text-[11px] tracking-[2px] text-clay font-semibold mb-3 uppercase">{p.role[lang]}</div>
-            <p class="text-[13px] text-black/70 leading-relaxed m-0 mb-3.5">{p.bio[lang]}</p>
-            <div class="flex flex-wrap gap-2.5">
-              {p.socials.map((s) => (
-                <span class="text-[10px] tracking-[1.5px] font-semibold px-2.5 py-1 border border-black/20 text-black/70 uppercase">
-                  {s}
-                </span>
-              ))}
-            </div>
+            {p.bio && (
+              <p class="text-[13px] text-black/70 leading-relaxed m-0 mb-3.5">{p.bio[lang]}</p>
+            )}
+            {p.linkedin && (
+              <div class="flex flex-wrap gap-2.5">
+                <a
+                  href={p.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-[10px] tracking-[1.5px] font-semibold px-2.5 py-1 border border-black/20 text-black/70 uppercase no-underline hover:bg-ink hover:text-cream hover:border-ink transition-colors"
+                >
+                  LinkedIn →
+                </a>
+              </div>
+            )}
           </div>
         </div>
       ))}

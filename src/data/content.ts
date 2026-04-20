@@ -7,7 +7,7 @@ export const COPY = {
     nav: { home: 'Home', courses: 'Courses', register: 'Register', about: 'About' },
     cta: { apply: 'Apply now', syllabus: 'View syllabus', signup: 'Register interest', submit: 'Submit' },
     home: {
-      eyebrow: 'COHORT 05 · APPLICATIONS OPEN',
+      eyebrow: 'FIRST COHORT · LAUNCHING SOON',
       heroLine1: 'Learn the',
       heroEm: 'craft',
       heroLine2: 'of AI-era marketing.',
@@ -15,17 +15,13 @@ export const COPY = {
         'An eight-week intensive for mid-career professionals in Saudi Arabia. Hands-on with the tools, frameworks, and teams shaping what comes next.',
       metricsTitle: 'Eight weeks. One cohort. Mid-career momentum.',
       m1: '8', m1l: 'week intensive',
-      m2: '24', m2l: 'learners per cohort',
-      m3: '5', m3l: 'senior practitioners on faculty',
-      m4: '96%', m4l: 'completion rate',
-      programsTitle: 'Our programmes',
-      programsSub: 'Two tracks. Both taught in the evenings, in person in Riyadh, with a remote option.',
-      testimonyEyebrow: 'FROM COHORT 04',
-      testimonyQuote:
-        '"I came in thinking I knew how marketing worked. I left knowing how to rebuild our whole team around AI. Hema didn\'t give me tools — it gave me a new operating model."',
-      testimonyBy: 'Nora Al-Otaibi · Head of Growth, Nahdi',
+      m2: '24', m2l: 'learners in the first cohort',
+      m3: '4', m3l: 'senior practitioners on faculty',
+      m4: '1', m4l: 'track, taught to depth',
+      programsTitle: 'Our programme',
+      programsSub: 'One track. Taught in the evenings, in person in Riyadh, with a remote option.',
       closingTitle: 'Ambition is a skill.',
-      closingSub: 'Apply for Cohort 05. Applications close 15 May 2026.',
+      closingSub: 'Register your interest — our first cohort is launching soon.',
     },
     register: {
       eyebrow: 'REGISTER YOUR INTEREST',
@@ -46,7 +42,7 @@ export const COPY = {
     about: {
       eyebrow: 'ABOUT',
       title: 'A school for the ambitious.',
-      sub: "Hema Academy was founded in 2025 in Riyadh by five senior practitioners who'd spent their careers bridging AI and marketing — and who wanted to bring that practice home.",
+      sub: "Hema Academy was founded in 2025 in Riyadh by four senior practitioners who'd spent their careers bridging AI and marketing — and who wanted to bring that practice home.",
       nameTitle: 'Behind the name',
       nameBody:
         "In Arabic, همّة (hemma) is a quiet word. It doesn't mean drive, or hustle, or grind — it means the particular kind of patient ambition that moves mountains. It's the word you use for someone who keeps climbing when no one is watching. We chose it because it describes the learners we build for.",
@@ -54,7 +50,7 @@ export const COPY = {
       markBody:
         'Our mark is a letter H made from two rising strokes, meeting at a summit. A small notch at the peak marks the top — a flag planted, a view earned. It reads as a mountain; it reads as ambition; it reads as an H. All three at once.',
       teamTitle: 'The team',
-      teamSub: 'Five practitioners. Senior enough to have seen every hype cycle. Present enough to teach you this one.',
+      teamSub: 'Four practitioners. Senior enough to have seen every hype cycle. Present enough to teach you this one.',
     },
     course: {
       eyebrow: 'PROGRAMME',
@@ -81,8 +77,8 @@ export const COPY = {
       logCostVal: 'Free for this pilot cohort — paid tracks start 2027',
     },
     coursesPage: {
-      title: 'Two tracks, one system.',
-      sub: 'Pick the track that matches where you are. Most learners take one; some take both over two cohorts.',
+      title: 'One track, taught to depth.',
+      sub: 'Applied AI for Marketing Leaders — our first track, designed for directors, VPs, and founders. Additional tracks will follow in later cohorts.',
     },
     footer: {
       tag: 'Ambition, taught.',
@@ -99,7 +95,7 @@ export const COPY = {
     nav: { home: 'الرئيسية', courses: 'البرامج', register: 'التسجيل', about: 'عن الأكاديمية' },
     cta: { apply: 'قدّم الآن', syllabus: 'عرض المنهج', signup: 'سجّل اهتمامك', submit: 'إرسال' },
     home: {
-      eyebrow: 'الدفعة الخامسة · التسجيل مفتوح',
+      eyebrow: 'الدفعة الأولى · تنطلق قريبًا',
       heroLine1: 'تعلّم',
       heroEm: 'حرفة',
       heroLine2: 'التسويق في عصر الذكاء الاصطناعي.',
@@ -107,17 +103,13 @@ export const COPY = {
         'برنامج مكثّف مدته ثمانية أسابيع، مصمَّم للمهنيين في منتصف مسارهم في المملكة العربية السعودية. تدريب عملي على الأدوات والأطر وفرق العمل التي تشكّل ملامح المرحلة القادمة.',
       metricsTitle: 'ثمانية أسابيع. دفعة واحدة. زخم في منتصف المسار المهني.',
       m1: '٨', m1l: 'أسابيع مكثّفة',
-      m2: '٢٤', m2l: 'متعلّمًا في الدفعة',
-      m3: '٥', m3l: 'ممارسين في هيئة التدريس',
-      m4: '٩٦٪', m4l: 'معدّل إتمام البرنامج',
-      programsTitle: 'برامجنا',
-      programsSub: 'مساران. كلاهما يُقدَّم مساءً، حضوريًا في الرياض، مع خيار الانضمام عن بُعد.',
-      testimonyEyebrow: 'من الدفعة الرابعة',
-      testimonyQuote:
-        '«دخلتُ البرنامج وأنا أظنّ أني أعرف كيف يعمل التسويق. خرجتُ وأنا أعرف كيف أعيد بناء فريقنا بالكامل حول الذكاء الاصطناعي. همّة لم تعطني أدوات — أعطتني نموذج تشغيل جديدًا.»',
-      testimonyBy: 'نورة العتيبي · مديرة النمو في نهدي',
+      m2: '٢٤', m2l: 'متعلّمًا في الدفعة الأولى',
+      m3: '٤', m3l: 'ممارسين في هيئة التدريس',
+      m4: '١', m4l: 'مسار، بعمق',
+      programsTitle: 'برنامجنا',
+      programsSub: 'مسار واحد. يُقدَّم مساءً، حضوريًا في الرياض، مع خيار الانضمام عن بُعد.',
       closingTitle: 'الهمّة مهارة.',
-      closingSub: 'قدّم للدفعة الخامسة. يُغلَق التسجيل في ١٥ مايو ٢٠٢٦.',
+      closingSub: 'سجّل اهتمامك — دفعتنا الأولى تنطلق قريبًا.',
     },
     register: {
       eyebrow: 'سجّل اهتمامك',
@@ -139,7 +131,7 @@ export const COPY = {
       eyebrow: 'عن الأكاديمية',
       title: 'مدرسة لأصحاب الهمّة.',
       sub:
-        'تأسّست أكاديمية همّة عام ٢٠٢٥ في الرياض، على يد خمسة ممارسين أمضوا سنواتهم على تقاطع الذكاء الاصطناعي والتسويق — وأرادوا أن يُعيدوا هذه الممارسة إلى وطنهم.',
+        'تأسّست أكاديمية همّة عام ٢٠٢٥ في الرياض، على يد أربعة ممارسين أمضوا سنواتهم على تقاطع الذكاء الاصطناعي والتسويق — وأرادوا أن يُعيدوا هذه الممارسة إلى وطنهم.',
       nameTitle: 'وراء الاسم',
       nameBody:
         'في العربية، «همّة» كلمة هادئة. لا تعني الاندفاع ولا الكدّ ولا السباق — بل ذلك النوع الصبور من الطموح الذي يُزحزح الجبال. هي الكلمة التي تصف من يواصل التسلّق حين لا يراه أحد. اخترناها لأنها تصف المتعلّمين الذين نبني لأجلهم.',
@@ -147,7 +139,7 @@ export const COPY = {
       markBody:
         'شعارنا هو حرف H مكوَّن من ضربتين صاعدتين تلتقيان عند القمّة. تُعلّم شُقّةٌ صغيرة في الأعلى موقع القمّة — علمٌ مغروس، ومشهدٌ مستحَقّ. يُقرأ جبلًا، ويُقرأ همّةً، ويُقرأ حرف H — ثلاثتها في آن.',
       teamTitle: 'الفريق',
-      teamSub: 'خمسة ممارسين. من الخبرة ما يكفي لرؤية كلّ موجة ضجيج. ومن الحضور ما يكفي لتدريسك هذه الموجة.',
+      teamSub: 'أربعة ممارسين. من الخبرة ما يكفي لرؤية كلّ موجة ضجيج. ومن الحضور ما يكفي لتدريسك هذه الموجة.',
     },
     course: {
       eyebrow: 'البرنامج',
@@ -174,8 +166,8 @@ export const COPY = {
       logCostVal: 'مجاني لهذه الدفعة التجريبية — المسارات المدفوعة تبدأ ٢٠٢٧',
     },
     coursesPage: {
-      title: 'مساران، منظومة واحدة.',
-      sub: 'اختر المسار الذي يناسب موقعك الحالي. معظم المتعلّمين يأخذون مسارًا واحدًا، والبعض يأخذ كليهما عبر دفعتَين.',
+      title: 'مسار واحد، بعمق.',
+      sub: 'الذكاء الاصطناعي التطبيقي لقادة التسويق — مسارنا الأوّل، مصمَّم للمديرين ونوّاب الرؤساء والمؤسّسين. ستنضمّ مسارات أخرى في الدفعات القادمة.',
     },
     footer: {
       tag: 'الهمّة تُدرَّس.',
@@ -240,45 +232,6 @@ export const COURSES: Course[] = [
       ar: ['مديرو ومديرات التسويق ونوّاب الرئيس', 'المؤسِّسون الذين يديرون تسويقهم بأنفسهم', 'تُشترَط خبرة لا تقلّ عن ٥ سنوات'],
     },
   },
-  {
-    id: 'digital-craft',
-    title: {
-      en: 'Digital Marketing: The Craft',
-      ar: 'التسويق الرقمي: الحِرفة',
-    },
-    tagline: {
-      en: 'The fundamentals, taught properly. For practitioners stepping up into senior roles.',
-      ar: 'الأساسيات كما ينبغي أن تُدرَّس. للممارسين الذين يستعدّون لأدوار قيادية.',
-    },
-    duration: { en: '8 weeks · evenings', ar: '٨ أسابيع · مساءً' },
-    next: { en: 'Starts 1 June 2026', ar: 'يبدأ ١ يونيو ٢٠٢٦' },
-    syllabus: {
-      en: [
-        ['01', 'Strategy before tactics', 'Positioning, audience, category — why most marketing fails at step one.'],
-        ['02', 'The modern funnel', 'Awareness, acquisition, retention. How the funnel actually works in 2026.'],
-        ['03', 'Brand as infrastructure', 'Why brand is a marketing asset, not a design deliverable.'],
-        ['04', 'Channels that matter', "Deep dive on SEO, paid social, content, and influencer — what's changed, what hasn't."],
-        ['05', 'Measurement without lying to yourself', 'Attribution models, incrementality, and the numbers that actually predict growth.'],
-        ['06', 'Creative that earns attention', 'The craft of making things people want to share — and the data behind why.'],
-        ['07', 'Running the marketing org', 'Briefs, agencies, teams. The boring stuff no one teaches.'],
-        ['08', 'Capstone · a 12-month plan', 'Present a real 12-month plan for your org. Peer-reviewed, faculty-critiqued.'],
-      ],
-      ar: [
-        ['٠١', 'الاستراتيجية قبل التكتيكات', 'التموضع والجمهور والفئة — لماذا يفشل معظم التسويق عند الخطوة الأولى.'],
-        ['٠٢', 'القمع الحديث', 'الوعي والاكتساب والاحتفاظ. كيف يعمل القمع فعلًا في ٢٠٢٦.'],
-        ['٠٣', 'العلامة بوصفها بنية تحتية', 'لماذا العلامة أصلٌ تسويقي، لا مخرجٌ تصميمي.'],
-        ['٠٤', 'القنوات التي تهمّ', 'تعمّق في الـ SEO والإعلانات الاجتماعية والمحتوى والمؤثّرين — ما تغيّر، وما ظلّ كما هو.'],
-        ['٠٥', 'القياس دون خداع للنفس', 'نماذج الإسناد، والـ incrementality، والأرقام التي تتنبّأ بالنمو فعلًا.'],
-        ['٠٦', 'إبداع يستحقّ الانتباه', 'حِرفة صُنع ما يرغب الناس بمشاركته — والبيانات التي تفسّر السبب.'],
-        ['٠٧', 'إدارة قسم التسويق', 'الـ briefs والوكالات والفِرَق. الأشياء المملّة التي لا يُدرّسها أحد.'],
-        ['٠٨', 'المشروع الختامي · خطّة اثني عشر شهرًا', 'قدّم خطّة حقيقية لمدّة ١٢ شهرًا لمؤسّستك.'],
-      ],
-    },
-    who: {
-      en: ['Marketing managers moving up', 'Specialists broadening into generalists', '3+ years of experience'],
-      ar: ['مديرو التسويق في طور الترقّي', 'المتخصّصون الذين يتوسّعون إلى أدوار عامّة', 'خبرة لا تقلّ عن ٣ سنوات'],
-    },
-  },
 ];
 
 export type Cohort = {
@@ -290,71 +243,47 @@ export type Cohort = {
 };
 
 export const COHORTS: Cohort[] = [
-  { code: '05', start: { en: '1 June 2026', ar: '١ يونيو ٢٠٢٦' }, end: { en: '27 July 2026', ar: '٢٧ يوليو ٢٠٢٦' }, status: { en: 'Open', ar: 'مفتوحة' }, open: true },
-  { code: '06', start: { en: '14 September 2026', ar: '١٤ سبتمبر ٢٠٢٦' }, end: { en: '9 November 2026', ar: '٩ نوفمبر ٢٠٢٦' }, status: { en: 'Waitlist', ar: 'قائمة انتظار' }, open: false },
-  { code: '07', start: { en: '11 January 2027', ar: '١١ يناير ٢٠٢٧' }, end: { en: '8 March 2027', ar: '٨ مارس ٢٠٢٧' }, status: { en: 'Announced', ar: 'معلَنة' }, open: false },
+  { code: '01', start: { en: '1 June 2026', ar: '١ يونيو ٢٠٢٦' }, end: { en: '27 July 2026', ar: '٢٧ يوليو ٢٠٢٦' }, status: { en: 'Launching soon', ar: 'تنطلق قريبًا' }, open: true },
+  { code: '02', start: { en: '14 September 2026', ar: '١٤ سبتمبر ٢٠٢٦' }, end: { en: '9 November 2026', ar: '٩ نوفمبر ٢٠٢٦' }, status: { en: 'Waitlist', ar: 'قائمة انتظار' }, open: false },
+  { code: '03', start: { en: '11 January 2027', ar: '١١ يناير ٢٠٢٧' }, end: { en: '8 March 2027', ar: '٨ مارس ٢٠٢٧' }, status: { en: 'Announced', ar: 'معلَنة' }, open: false },
 ];
 
 export type TeamMember = {
   initials: string;
   colorClass: string;
   textClass: string;
+  photo?: string;
   name: Record<Lang, string>;
   role: Record<Lang, string>;
-  bio: Record<Lang, string>;
-  socials: string[];
+  bio?: Record<Lang, string>;
+  linkedin?: string;
 };
 
 export const TEAM: TeamMember[] = [
   {
-    initials: 'LK', colorClass: 'bg-clay', textClass: 'text-cream',
-    name: { en: 'Layla Al-Qahtani', ar: 'ليلى القحطاني' },
-    role: { en: 'Co-founder · Faculty Lead, AI', ar: 'شريكة مؤسِّسة · رئيسة هيئة التدريس، الذكاء الاصطناعي' },
-    bio: {
-      en: 'Former Head of ML at Careem. Built her first neural net in 2014, her first marketing attribution model in 2018, her first LLM-powered product in 2022. PhD, KAUST.',
-      ar: 'الرئيسة السابقة لتعلُّم الآلة في كريم. بنت أوّل شبكة عصبية لها عام ٢٠١٤، وأوّل نموذج إسناد تسويقي عام ٢٠١٨، وأوّل منتج قائم على النماذج اللغوية الكبيرة عام ٢٠٢٢. دكتوراه من جامعة الملك عبدالله للعلوم والتقنية.',
-    },
-    socials: ['layla.sa', 'linkedin', 'x'],
+    initials: 'AA', colorClass: 'bg-clay', textClass: 'text-cream',
+    photo: '/team/ahmad-abugosh.jpg',
+    name: { en: 'Ahmad Abugosh', ar: 'أحمد أبو غوش' },
+    role: { en: 'Co-founder', ar: 'شريك مؤسِّس' },
+    linkedin: 'https://www.linkedin.com/in/ahmadabugosh/',
   },
   {
-    initials: 'RS', colorClass: 'bg-oasis', textClass: 'text-cream',
-    name: { en: 'Rakan Al-Sudairi', ar: 'راكان السديري' },
-    role: { en: 'Co-founder · Head of Faculty', ar: 'شريك مؤسِّس · رئيس هيئة التدريس' },
-    bio: {
-      en: "Twenty years in brand strategy. Built marketing orgs at STC, noon, and a Stockholm-based consumer brand you've heard of. Teaches the Digital Craft track.",
-      ar: 'عشرون عامًا في استراتيجية العلامات التجارية. بنى أقسام التسويق في الاتصالات السعودية ونون وعلامة استهلاكية مقرّها ستوكهولم تعرفها جيّدًا. يُدرّس مسار التسويق الرقمي.',
-    },
-    socials: ['rakan.sa', 'linkedin'],
+    initials: 'NT', colorClass: 'bg-oasis', textClass: 'text-cream',
+    name: { en: 'Naguib Toihiri', ar: 'نجيب طويهري' },
+    role: { en: 'Co-founder', ar: 'شريك مؤسِّس' },
+    linkedin: 'https://www.linkedin.com/in/naguib-toihiri/',
   },
   {
-    initials: 'NH', colorClass: 'bg-night', textClass: 'text-cream',
-    name: { en: 'Nouf Al-Harbi', ar: 'نوف الحربي' },
-    role: { en: 'Co-founder · Head of Admissions', ar: 'شريكة مؤسِّسة · رئيسة القبول' },
-    bio: {
-      en: 'Previously head of growth at a Saudi fintech. Runs the admissions process and makes sure every cohort is the right mix of ambition and humility.',
-      ar: 'رئيسة النمو سابقًا في إحدى شركات التقنية المالية السعودية. تقود عملية القبول وتحرص على أن تكون كلّ دفعة مزيجًا صحيحًا من الطموح والتواضع.',
-    },
-    socials: ['nouf.sa', 'linkedin'],
+    initials: 'MA', colorClass: 'bg-night', textClass: 'text-cream',
+    name: { en: 'Mohtab Arabiat', ar: 'مهتاب عرابيات' },
+    role: { en: 'Co-founder', ar: 'شريك مؤسِّس' },
+    linkedin: 'https://www.linkedin.com/in/mohtab/',
   },
   {
-    initials: 'MA', colorClass: 'bg-saffron', textClass: 'text-ink',
-    name: { en: 'Majed Al-Ansari', ar: 'ماجد الأنصاري' },
-    role: { en: 'Faculty · Paid Media', ar: 'هيئة التدريس · الإعلانات المدفوعة' },
-    bio: {
-      en: "Ran paid acquisition teams at two unicorns. Teaches weeks 5 and 7 of the AI Marketing track. Known for refusing to teach anything he hasn't shipped that quarter.",
-      ar: 'قاد فرق الاكتساب المدفوع في شركتين يونيكورن. يُدرّس الأسبوعين الخامس والسابع من مسار التسويق بالذكاء الاصطناعي. يُعرَف برفضه تدريس أيّ شيء لم يُنفّذه بنفسه في الربع الحالي.',
-    },
-    socials: ['majed.sa', 'linkedin', 'x'],
-  },
-  {
-    initials: 'SK', colorClass: 'bg-ink', textClass: 'text-cream',
-    name: { en: 'Sara Al-Khalifa', ar: 'سارة الخليفة' },
-    role: { en: 'Faculty · Brand & Creative', ar: 'هيئة التدريس · العلامة والإبداع' },
-    bio: {
-      en: "Creative director. Built brand systems for three of the region's most recognizable consumer brands. Teaches week 6 of both tracks.",
-      ar: 'مديرة إبداعية. بنت أنظمة هويّة لثلاث من أبرز العلامات الاستهلاكية في المنطقة. تُدرّس الأسبوع السادس في كلا المسارَين.',
-    },
-    socials: ['sara.sa', 'linkedin', 'x'],
+    initials: 'AJ', colorClass: 'bg-saffron', textClass: 'text-ink',
+    name: { en: 'Abdel Kader Jrab', ar: 'عبد القادر جراب' },
+    role: { en: 'Co-founder', ar: 'شريك مؤسِّس' },
+    linkedin: 'https://www.linkedin.com/in/abdelkaderjrab/',
   },
 ];
 
