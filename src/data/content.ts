@@ -5,7 +5,7 @@ export const LOCALES: Lang[] = ['en', 'ar'];
 export const COPY = {
   en: {
     nav: { home: 'Home', courses: 'Courses', register: 'Register', about: 'About' },
-    cta: { apply: 'Apply now', syllabus: 'View syllabus', signup: 'Register interest', submit: 'Submit' },
+    cta: { apply: 'Apply now', syllabus: 'View syllabus', signup: 'Apply to join', submit: 'Submit' },
     home: {
       eyebrow: 'FIRST COHORT · LAUNCHING SOON',
       heroLine1: 'Learn the',
@@ -15,7 +15,7 @@ export const COPY = {
         'An eight-week intensive for mid-career professionals in Saudi Arabia. Hands-on with the tools, frameworks, and teams shaping what comes next.',
       metricsTitle: 'Eight weeks. One cohort. Mid-career momentum.',
       m1: '8', m1l: 'week intensive',
-      m2: '24', m2l: 'learners in the first cohort',
+      m2: '25', m2l: 'learners in the first cohort',
       m3: '4', m3l: 'senior practitioners on faculty',
       m4: '1', m4l: 'track, taught to depth',
       programsTitle: 'Our programme',
@@ -25,7 +25,7 @@ export const COPY = {
     },
     register: {
       eyebrow: 'REGISTER YOUR INTEREST',
-      title: "Tell us you're coming.",
+      title: 'Apply to join.',
       sub: "Leave your email and we'll send syllabus details, cohort dates, and admissions info.",
       emailLabel: 'Email address',
       emailPh: 'you@company.com',
@@ -42,7 +42,7 @@ export const COPY = {
     about: {
       eyebrow: 'ABOUT',
       title: 'A school for the ambitious.',
-      sub: "Hema Academy was founded in 2025 in Riyadh by four senior practitioners who'd spent their careers bridging AI and marketing — and who wanted to bring that practice home.",
+      sub: "Hema Academy was founded in 2026 in Riyadh by four senior practitioners who'd spent their careers bridging AI and marketing, to help others ascend.",
       nameTitle: 'Behind the name',
       nameBody:
         "In Arabic, همّة (hemma) is a quiet word. It doesn't mean drive, or hustle, or grind — it means the particular kind of patient ambition that moves mountains. It's the word you use for someone who keeps climbing when no one is watching. We chose it because it describes the learners we build for.",
@@ -66,7 +66,7 @@ export const COPY = {
       formatLabel: 'Format',
       formatValue: 'In-person · Riyadh',
       readyTitle: 'Ready to climb?',
-      readySub: "Register interest and we'll save you a seat for review.",
+      readySub: "Apply to join and we'll save you a seat for review.",
       logWhen: 'When',
       logWhere: 'Where',
       logRemote: 'Remote',
@@ -93,7 +93,7 @@ export const COPY = {
   },
   ar: {
     nav: { home: 'الرئيسية', courses: 'البرامج', register: 'التسجيل', about: 'عن همّة' },
-    cta: { apply: 'قدّم الآن', syllabus: 'عرض المنهج', signup: 'سجّل اهتمامك', submit: 'إرسال' },
+    cta: { apply: 'قدّم الآن', syllabus: 'عرض المنهج', signup: 'قدّم للانضمام', submit: 'إرسال' },
     home: {
       eyebrow: 'الدفعة الأولى · تنطلق قريبًا',
       heroLine1: 'تعلّم',
@@ -103,7 +103,7 @@ export const COPY = {
         'برنامج مكثّف مدته ثمانية أسابيع، مصمَّم للمهنيين في منتصف مسارهم في المملكة العربية السعودية. تدريب عملي على الأدوات والأطر وفرق العمل التي تشكّل ملامح المرحلة القادمة.',
       metricsTitle: 'ثمانية أسابيع. دفعة واحدة. زخم في منتصف المسار المهني.',
       m1: '٨', m1l: 'أسابيع مكثّفة',
-      m2: '٢٤', m2l: 'متعلّمًا في الدفعة الأولى',
+      m2: '٢٥', m2l: 'متعلّمًا في الدفعة الأولى',
       m3: '٤', m3l: 'ممارسين في هيئة التدريس',
       m4: '١', m4l: 'مسار، بعمق',
       programsTitle: 'برنامجنا',
@@ -113,7 +113,7 @@ export const COPY = {
     },
     register: {
       eyebrow: 'سجّل اهتمامك',
-      title: 'أخبرنا أنك قادم.',
+      title: 'قدّم للانضمام.',
       sub: 'اترك بريدك الإلكتروني وسنرسل لك تفاصيل المنهج ومواعيد الدفعات ومعلومات القبول.',
       emailLabel: 'البريد الإلكتروني',
       emailPh: 'you@company.com',
@@ -131,7 +131,7 @@ export const COPY = {
       eyebrow: 'عن الأكاديمية',
       title: 'مدرسة لأصحاب الهمّة.',
       sub:
-        'تأسّست أكاديمية همّة عام ٢٠٢٥ في الرياض، على يد أربعة ممارسين أمضوا سنواتهم على تقاطع الذكاء الاصطناعي والتسويق — وأرادوا أن يُعيدوا هذه الممارسة إلى وطنهم.',
+        'تأسّست أكاديمية همّة عام ٢٠٢٦ في الرياض، على يد أربعة ممارسين أمضوا سنواتهم على تقاطع الذكاء الاصطناعي والتسويق، ليساعدوا غيرهم على الارتقاء.',
       nameTitle: 'وراء الاسم',
       nameBody:
         'في العربية، «همّة» كلمة هادئة. لا تعني الاندفاع ولا الكدّ ولا السباق — بل ذلك النوع الصبور من الطموح الذي يُزحزح الجبال. هي الكلمة التي تصف من يواصل التسلّق حين لا يراه أحد. اخترناها لأنها تصف المتعلّمين الذين نبني لأجلهم.',
@@ -155,7 +155,7 @@ export const COPY = {
       formatLabel: 'الصيغة',
       formatValue: 'حضوري · الرياض',
       readyTitle: 'مستعدّ للتسلّق؟',
-      readySub: 'سجّل اهتمامك وسنحجز لك مقعدًا للمراجعة.',
+      readySub: 'قدّم للانضمام وسنحجز لك مقعدًا للمراجعة.',
       logWhen: 'الوقت',
       logWhere: 'المكان',
       logRemote: 'عن بُعد',
@@ -261,11 +261,11 @@ export type TeamMember = {
 
 export const TEAM: TeamMember[] = [
   {
-    initials: 'AA', colorClass: 'bg-clay', textClass: 'text-cream',
-    photo: '/team/ahmad-abugosh.jpg',
-    name: { en: 'Ahmad Abugosh', ar: 'أحمد أبو غوش' },
+    initials: 'MA', colorClass: 'bg-night', textClass: 'text-cream',
+    photo: '/team/mohtab-arabiat.jpg',
+    name: { en: 'Mohtab Arabiat', ar: 'مهتاب عربيات' },
     role: { en: 'Co-founder', ar: 'شريك مؤسِّس' },
-    linkedin: 'https://www.linkedin.com/in/ahmadabugosh/',
+    linkedin: 'https://www.linkedin.com/in/mohtab/',
   },
   {
     initials: 'NT', colorClass: 'bg-oasis', textClass: 'text-cream',
@@ -275,11 +275,11 @@ export const TEAM: TeamMember[] = [
     linkedin: 'https://www.linkedin.com/in/naguib-toihiri/',
   },
   {
-    initials: 'MA', colorClass: 'bg-night', textClass: 'text-cream',
-    photo: '/team/mohtab-arabiat.jpg',
-    name: { en: 'Mohtab Arabiat', ar: 'مهتاب عربيات' },
+    initials: 'AA', colorClass: 'bg-clay', textClass: 'text-cream',
+    photo: '/team/ahmad-abugosh.jpg',
+    name: { en: 'Ahmad Abugosh', ar: 'أحمد أبو غوش' },
     role: { en: 'Co-founder', ar: 'شريك مؤسِّس' },
-    linkedin: 'https://www.linkedin.com/in/mohtab/',
+    linkedin: 'https://www.linkedin.com/in/ahmadabugosh/',
   },
   {
     initials: 'AJ', colorClass: 'bg-saffron', textClass: 'text-ink',
