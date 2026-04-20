@@ -277,7 +277,7 @@ export const TEAM: TeamMember[] = [
   {
     initials: 'MA', colorClass: 'bg-night', textClass: 'text-cream',
     photo: '/team/mohtab-arabiat.jpg',
-    name: { en: 'Mohtab Arabiat', ar: 'مهتاب عرابيات' },
+    name: { en: 'Mohtab Arabiat', ar: 'مهتاب عربيات' },
     role: { en: 'Co-founder', ar: 'شريك مؤسِّس' },
     linkedin: 'https://www.linkedin.com/in/mohtab/',
   },
